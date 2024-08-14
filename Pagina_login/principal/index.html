@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div id="menu">
+        <h1>Login</h1>
+        <div class="input"><input id="email" type="email" maxlength="50"><p id="placeholderE" class="placeholder">E-mail</p></div>
+        <div class="input"><input id="password" type="password" maxlength="8"><p tabindex="0" id="placeholderP" class="placeholder">Password</p></div>
+        <button>Entrar</button>
+        <p>Don't have an account? <a href="#">Sing up</a></p>
+    </div>
+</body>
+<script>
+    var email = document.getElementById("placeholderE")
+    var password = document.getElementById("placeholderP")
+    var inputE = document.getElementById("email")
+    var inputP = document.getElementById("password")
+
+    inputE.addEventListener('focus', focadoE)
+    inputE.addEventListener('blur', blurE)
+    inputP.addEventListener('focus', focadoP)
+    inputP.addEventListener('blur', blurP)
+
+
+    function focadoE(){
+        email.classList.add('focadoE')
+    }
+    function focadoP(){
+        password.classList.add('focadoP')
+    }
+    function blurE(){
+        email.classList.remove('focadoE')
+    }
+    function blurP(){
+        password.classList.remove('focadoP')
+    }
+</script>
+</html>
